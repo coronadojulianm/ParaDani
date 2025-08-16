@@ -5,22 +5,14 @@ body {
   font-family: "Emilys Candy", serif;
   font-weight: 400;
   font-style: normal;
-
-  /* Fondo base + patrón floral */
   background: #ffffff url("https://www.transparenttextures.com/patterns/flowers.png");
-
-  /* Más flores → reduce tamaño */
   background-repeat: repeat;
-  background-size: 150px; /* antes 200px, ahora mucho más visible */
-  
+  background-size: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-
-
-
 .container {
   text-align: center;
   padding: 20px;
@@ -29,7 +21,7 @@ body {
 
 h1 {
   font-size: 26px;
-  color: #C47FEB; /* Violeta */
+  color: #C47FEB;
   margin-bottom: 20px;
 }
 
@@ -37,14 +29,14 @@ h1 {
   width: 100%;
   border-radius: 14px;
   margin-bottom: 20px;
-  border: 4px solid #E87FEB; /* Marco rosa vivo */
+  border: 4px solid #E87FEB; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .btn {
   display: inline-block;
   padding: 14px 22px;
-  background: #EB837F; /* Botón rosa coral */
+  background: #EB837F; 
   color: white;
   text-decoration: none;
   border-radius: 10px;
@@ -55,11 +47,11 @@ h1 {
 }
 
 .btn:hover {
-  background: #EB80B1; /* Hover rosado más suave */
+  background: #EB80B1;
   transform: scale(1.05);
 }
 
-/* Galería en álbum */
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,10 +62,10 @@ h1 {
 .grid img {
   width: 100%;
   border-radius: 10px;
-  border: 3px solid #EB967F; /* Marco cálido */
+  border: 3px solid #EB967F; 
 }
 
-/* Lightbox oculto por defecto */
+
 #lightbox {
   display: none;
   position: fixed;
@@ -103,20 +95,17 @@ h1 {
 #lightbox-desc {
   margin-top: 15px;
   font-size: 16px;
-  color: #EBCDDA; /* de tu paleta */
+  color: #EBCDDA;
 }
 
-/* Botón cerrar */
 .close {
   position: absolute;
   top: 15px;
   right: 25px;
   font-size: 30px;
-  color: white;
+  color: #EB80B1;
   cursor: pointer;
 }
-
-/* Animaciones */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
