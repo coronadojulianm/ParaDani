@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  /* Fondo base + patrón floral */
+  background: #ffffff url("https://www.transparenttextures.com/patterns/flowers.png");
+
+  /* Más flores → reduce tamaño */
+  background-repeat: repeat;
+  background-size: 150px; /* antes 200px, ahora mucho más visible */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 26px;
+  color: #C47FEB; /* Violeta */
+  margin-bottom: 20px;
+}
+
+.foto {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  border: 4px solid #E87FEB; /* Marco rosa vivo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #EB837F; /* Botón rosa coral */
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background: #EB80B1; /* Hover rosado más suave */
+  transform: scale(1.05);
+}
+
+/* Galería en álbum */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid #EB967F; /* Marco cálido */
+}
+
+/* Lightbox oculto por defecto */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  text-align: center;
+  color: white;
+  animation: scaleIn 0.3s;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+#lightbox-desc {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #EBCDDA; /* de tu paleta */
+}
+
+/* Botón cerrar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
